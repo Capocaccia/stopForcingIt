@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="pico.min.css">
+  </head>
+  <body class="container">
+	<script src="index.js"></script>
+    <h1>Stop Forcing It!</h1>
+    <p>Its all too easy when using an automated testing tool to force a user behavior like clicking on an element. If you run the Cypress tests for this repo, they will all pass. But in reality, they shouldnt! They pass because we are forcing user behavior which bypasses all of the checks Cypress provides.</p>
+    <p>
+        <strong>What's the difference between using force and not using force?</strong>
+    </p>
+    <p>When you force an event to happen Cypress will:</p>
+        <ul>
+            <li>Continue to perform all default actions</li>
+            <li>Forcibly fire the event at the element</li>
+        </ul>
+    <p>Cypress will NOT perform these:</p>
+    <ul>
+        <li>Scroll the element into view</li>
+        <li>Ensure it is visible</li>
+        <li>Ensure it is not disabled</li>
+        <li>Ensure it is not detached</li>
+        <li>Ensure it is not readonly</li>
+        <li>Ensure it is not animating</li>
+        <li>Ensure it is not covered</li>
+        <li>Fire the event at a descendent</li>
+    </ul>
+    <div class="form">
+        <label for="name">Form Example - Can you submit this form?</label>
+        <input type="text" class="name" placeholder="First Name">
+        <button class="submit">Submit Me</button>
+    </div>
+    <p>    
+        <a href="https://docs.cypress.io/guides/core-concepts/interacting-with-elements#Forcing">Check the Cypress docs here.</a>
+    </p>
+  </body>
+</html>
